@@ -56,6 +56,7 @@ find_program(AVR_NM avr-nm)
 find_program(AVR_RANLIB avr-ranlib)
 find_program(AVR_STRIP avr-strip)
 find_program(AVR_ASM avra)
+find_program(AVR_AS avr-as)
 
 ##########################################################################
 # toolchain starts with defining mandatory variables
@@ -64,7 +65,7 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR avr)
 set(CMAKE_C_COMPILER ${AVR_CC})
 set(CMAKE_CXX_COMPILER ${AVR_CXX})
-set(CMAKE_OBJCOPY ${AVR_OBJCOPY}) 
+set(CMAKE_OBJCOPY ${AVR_OBJCOPY})
 set(CMAKE_SIZE_TOOL ${AVR_SIZE_TOOL})
 set(CMAKE_OBJDUMP ${AVR_OBJDUMP})
 set(CMAKE_AR ${AVR_ARCHIVER})
@@ -72,8 +73,8 @@ set(CMAKE_LINKER ${AVR_LINKER})
 set(CMAKE_NM ${AVR_NM})
 set(CMAKE_RANLIB ${AVR_RANLIB})
 set(CMAKE_STRIP ${AVR_STRIP})
-set(CMAKE_ASM_COMPILER ${AVR_ASM})
-#set(MCU_MAX_SIZE 28672) #TODO use this! 
+set(CMAKE_ASM_COMPILER ${AVR_AS})
+#set(MCU_MAX_SIZE 28672) #TODO use this!
 
 
 ##################################################################################
