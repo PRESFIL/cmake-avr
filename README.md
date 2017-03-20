@@ -92,12 +92,4 @@ make help
 
 after running the `cmake` command.
 
-### ToDo
-
-- [X] option for target name attachments with MCU type (option -DWITH_MCU=ON (default))
-- [X] usage of target names w/o extension for avr_target_link_libraries command
-- [X] cleanup baudrate and other AVRDUDE settings
-- [X] test in Windows environment
-- [X] use add_definition() instead of variables for compiler settings
-- [X] some more tests with upload and fuses
-
+### [TODO](./TODO.md)

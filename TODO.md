@@ -1,5 +1,4 @@
 ## TODO:
-
 - remove fuses requirement
 - if not fuses then no set_fuses
   - or set_fuses with fuses values as parameters
