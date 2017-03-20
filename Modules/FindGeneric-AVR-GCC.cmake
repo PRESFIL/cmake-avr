@@ -40,6 +40,7 @@
 # options
 ##########################################################################
 option(WITH_MCU "Add the mCU type to the target file name." ON)
+option(CXX_NO_THREAD_SAFE_STATICS "Don't use fread save statics in C++" ON)
 
 ##########################################################################
 # executables in use
@@ -252,6 +253,13 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
    set(CMAKE_C_FLAGS_DEBUG "-O0 -save-temps -g -gdwarf-3 -gstrict-dwarf")
    set(CMAKE_CXX_FLAGS_DEBUG "-O0 -save-temps -g -gdwarf-3 -gstrict-dwarf")
 endif(CMAKE_BUILD_TYPE MATCHES Debug)
+
+##########################################################################
+# thread safe option
+##########################################################################
+if(CXX_NO_THREAD_SAFE_STATICS)
+   set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fno-threadsafe-statics)
+endif(CXX_NO_THREAD_SAFE_STATICS)
 
 ##########################################################################
 # target file name add-on option
