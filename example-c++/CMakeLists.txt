@@ -26,6 +26,7 @@ set(AVR_UPLOAD_BAUDRATE 115200)
 set(AVR_UPLOADTOOL_OPTIONS "")
 
 set(WITH_MCU OFF)
+set(WITH_MCU OFF CACHE BOOL "Add the mCU type to the target file name." FORCE)
 
 ##################################################################################
 # AVR and fuses needs to be set
@@ -33,6 +34,11 @@ set(WITH_MCU OFF)
 set(AVR_MCU atmega32)
 set(AVR_H_FUSE 0xd9)
 set(AVR_L_FUSE 0xc3)
+
+##################################################################################
+# needs to be defined for AVR toolchain
+##################################################################################
+set(AVR_MCU_SPEED "4000000UL")
 
 ### END TOOLCHAIN SETUP AREA #####################################################
 
@@ -43,11 +49,6 @@ find_package(Generic-AVR-GCC)
 ##################################################################################
 project(AVR-CPP-EXAMPLE)
 set(CMAKE_BUILD_TYPE Release)
-
-##################################################################################
-# needs to be defined for AVR toolchain
-##################################################################################
-set(AVR_MCU_SPEED "4000000UL")
 
 ##################################################################################
 # set command line arguments for compiler

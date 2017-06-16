@@ -160,7 +160,7 @@ if(NOT AVR_UPLOADTOOL_OPTIONS)
 		AVR_UPLOADTOOL_OPTIONS ""
 		CACHE STRING "Set additional avrdude options (see 'avrdude --help')"
 	)
-endif(NOT AVR AVR_UPLOADTOOL_OPTIONS)
+endif(NOT AVR_UPLOADTOOL_OPTIONS)
 
 # default programmer (hardware)
 if(NOT AVR_PROGRAMMER)
